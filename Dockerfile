@@ -1,5 +1,5 @@
 # Step 1: Use official Python base image
-FROM python:3.9-slim
+FROM python:3.12-trixie
 
 # Step 2: Set working directory
 WORKDIR /app
@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Step 6: Run the Flask app
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
